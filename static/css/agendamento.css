@@ -1,0 +1,111 @@
+/* geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+
+    position: sticky; 
+    top: 0; 
+    width: 100%; 
+    background-color: #050f16; 
+    z-index: 1000; 
+}
+
+
+body{
+    
+    background-color: #051119;
+    color: white;
+}
+
+/* NavBar*/
+
+.menu {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo{
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+.opcao {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px; 
+    border-radius: 20px; 
+    background-color: rgb(58, 58, 58);
+    
+}
+
+
+
+.texto {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*Formulario*/
+
+.formulario {
+    margin: 0 auto; 
+    margin-top: 50px;
+    width: 500px;
+    
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    background-color: #333;
+    color: white;
+}
+
+.formulario input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #45a049;
+    ;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #050f16;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
