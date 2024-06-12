@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 # import uvicorn
 # from fastapi import FastAPI, Request
 # from fastapi.responses import HTMLResponse
@@ -170,17 +171,43 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Rota para a página principal
 
+=======
+import uvicorn
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from sqlalchemy.orm import Session
+from models.models import Base
+from crud.crud import get_users, create_user
+from database.connection import SessionLocal, engine  
+
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+templates = Jinja2Templates(directory="templates")
+
+# Rota para a página principal
+>>>>>>> b82a2abc6a6776dc757eb49add006919d9138603
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     users = get_users(SessionLocal())
     return templates.TemplateResponse("index.html", {"request": request, "users": users})
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b82a2abc6a6776dc757eb49add006919d9138603
 # Rota para a página cortes
 
 @app.get("/cortes", response_class=HTMLResponse)  
 async def read_cortes(request: Request):
     return templates.TemplateResponse("cortes.html", {"request": request})
 
+<<<<<<< HEAD
 
 # Rota para a página agendamento
 @app.get("/agendamento", response_class=HTMLResponse)  
@@ -192,3 +219,6 @@ async def read_agendamento(request: Request):
 # Executa o servidor Uvicorn
 if __name__ == "__main__":
     uvicorn.run(app)  
+=======
+uvicorn.run(app)
+>>>>>>> b82a2abc6a6776dc757eb49add006919d9138603
