@@ -1,14 +1,17 @@
-/* geral */
-
-*{
+/* Reset de estilos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-header {
+/* Estilos gerais */
+body {
+    background-color: #051119;
+    color: white;
+}
 
+.header {
     position: sticky; 
     top: 0; 
     width: 100%; 
@@ -16,27 +19,21 @@ header {
     z-index: 1000; 
 }
 
-
-body{
-    
-    background-color: #051119;
-    color: white;
-}
-
-/* NavBar*/
-
 .menu {
     display: flex;
     align-items: center;
-
 }
 
-.logo{
-    margin-right: 50px;
-    margin-left: 20px;
+.logo {
+    margin-left: 40px;
     margin-bottom: 10px;
 }
 
+.menu-options {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+}
 
 .opcao {
     margin-left: 20px;
@@ -45,19 +42,14 @@ body{
     padding: 10px 15px; 
     border-radius: 20px; 
     background-color: rgb(58, 58, 58);
-    
 }
-
-
 
 .texto {
     margin-top: 30px;
     text-align: center;
 }
 
-
-/* Galeria  de fotos*/
-
+/* Galeria de fotos */
 .galeria {
     max-width: 1200px; 
     margin: 0 auto; 
@@ -67,28 +59,53 @@ body{
     justify-items: center; 
 }
 
-.galeria img {
+.imagem-galeria {
     height: 225px;
     width: auto;
     margin: 10px;
     border-radius: 20px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.galeria img:hover {
-    transform: scale(1.3);
+.imagem-galeria:hover {
+    transform: scale(1.1);
 }
 
-/* Footer */
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
 
-footer {
-    background-color: #050f16;
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%;
+}
+
+.close {
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
 }
