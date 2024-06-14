@@ -1,23 +1,25 @@
-/* Reset de estilos */
+geral
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos gerais */
-body {
-    background-color: #051119;
-    color: white;
-}
-
-.header {
+header {
     position: sticky; 
     top: 0; 
     width: 100%; 
     background-color: #050f16; 
     z-index: 1000; 
 }
+
+body {
+    background-color: #051119;
+    color: white;
+}
+
+/* NavBar */
 
 .menu {
     display: flex;
@@ -32,7 +34,7 @@ body {
 .menu-options {
     display: flex;
     margin-left: auto;
-    margin-right: 40px;
+    margin-right: 40px
 }
 
 .opcao {
@@ -44,10 +46,25 @@ body {
     background-color: rgb(58, 58, 58);
 }
 
+.profile {
+    margin-left: 20px; 
+}
+
+.profile img {
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    object-fit: cover; 
+}
+
+
+
 .texto {
     margin-top: 30px;
     text-align: center;
 }
+
+
 
 /* Galeria de fotos */
 .galeria {

@@ -1,0 +1,121 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #050f16;
+    z-index: 1000;
+}
+
+body {
+    background-color: #051119;
+    color: white;
+}
+
+/* NavBar */
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.menu-options {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.opcao {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(58, 58, 58);
+}
+
+.profile {
+    margin-left: 20px;
+}
+
+.profile img {
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    object-fit: cover; 
+}
+
+
+/* Perfil */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container h2 {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.perfil {
+    text-align: start;
+    border: 2px solid rgb(255, 255, 255);;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #051119;
+    width: 300px; /* Largura fixa para centralização */
+}
+
+.dados-usuario {
+    margin: 20px 0;
+}
+
+.dados-usuario p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.agendamento {
+    background-color: rgb(56, 56, 56);
+
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+
+.logout {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.logout:hover {
+    background-color: rgb(182, 0, 0);
+}

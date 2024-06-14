@@ -1,4 +1,4 @@
-/* geral */
+geral
 
 * {
     margin: 0;
@@ -44,6 +44,17 @@ body {
     padding: 10px 15px; 
     border-radius: 20px; 
     background-color: rgb(58, 58, 58);
+}
+
+.profile {
+    margin-left: 20px; 
+}
+
+.profile img {
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    object-fit: cover; 
 }
 
 /* Banner */

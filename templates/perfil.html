@@ -1,0 +1,40 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barbearia - Perfil</title>
+        <link rel="stylesheet" href="/static/css/perfil.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <img class="logo" src="/static/img/logo.png" alt="Logo" width="100" height="100">
+                <div class="menu-options">
+                    <a href="/" class="opcao">Início</a>
+                    <a href="/agendamento" class="opcao">Agende-se</a>
+                    <a href="/cortes" class="opcao">Cortes</a>
+                    {% if request.session.get('user_email') %}
+                    <a href="/perfil" class="profile"><img src="/static/img/perfil.png" alt="Perfil" width="30" height="30"></a>
+                    {% else %}
+                    <a href="/login" class="opcao">Login</a>    
+                    {% endif %}
+                </div>
+            </nav>
+        </header>   
+        
+        <div class="container">
+            <h2>Perfil do Usuário</h2>
+            <div class="perfil">
+                <div class="dados-usuario">
+                    <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+                    <p><strong>Email:</strong> {{ usuario.email }}</p>
+                </div>
+                <div class="botoes">
+                    <a href="/meus_agendamentos" class="agendamento">Meus agendamentos</a>
+                    <a href="/logout" class="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

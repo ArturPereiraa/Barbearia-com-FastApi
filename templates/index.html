@@ -1,28 +1,29 @@
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbearia</title>
-    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
     <header>
         <nav class="menu">
-            <img class="logo" src="static/img/logo.png" alt="Logo" width="100" height="100">
+            <img class="logo" src="/static/img/logo.png" alt="Logo" width="100" height="100">
             <div class="menu-options">
                 <a href="/" class="opcao">Início</a>
                 <a href="/agendamento" class="opcao">Agende-se</a>
                 <a href="/cortes" class="opcao">Cortes</a>
-                <a href="/login" class="opcao">Login</a>
+                {% if request.session.get('user_email') %}
+                <a href="/perfil" class="profile"><img src="/static/img/perfil.png" alt="Perfil" width="30" height="30"></a>
+                {% else %}
+                <a href="/login" class="opcao">Login</a>    
+                {% endif %}
             </div>
         </nav>
     </header>       
     <div class="container-banner">
-        <img class="banner" src="static/img/Barbearia.jpg" alt="Banner" width="100%" height="auto">
+        <img class="banner" src="/static/img/Barbearia.jpg" alt="Banner" width="100%" height="auto">
         <div class="texto-banner">
             Bem Vindo a Barbearia 
         </div>
@@ -43,4 +44,3 @@
     </footer>
 </body>
 </html>
-        
