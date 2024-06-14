@@ -73,6 +73,8 @@ body {
 }
 
 /* Modal */
+
+
 .modal {
     display: none;
     position: fixed;
@@ -109,3 +111,5 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+

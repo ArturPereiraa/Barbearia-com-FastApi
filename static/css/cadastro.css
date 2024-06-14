@@ -72,8 +72,8 @@ body{
 }
 
 .formulario input[type="text"],
-.formulario input[type="date"],
-.formulario input[type="time"] {
+.formulario input[type="email"],
+.formulario input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -96,4 +96,16 @@ body{
     background-color: #45a049;
     ;
 }
+
+/* Usuari já existente */
+
+.mensagem {
+    text-align: center; 
+    margin-top: 20px; 
+    color: red;
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
 
