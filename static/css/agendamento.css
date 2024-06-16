@@ -107,3 +107,8 @@ body{
     ;
 }
 
+
+.sucesso {
+    text-align: center;
+    color: green;
+}

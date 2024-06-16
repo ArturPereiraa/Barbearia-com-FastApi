@@ -19,22 +19,21 @@
         </nav>
     </header>
 
-    <h1 class="texto">Login</h1>
-    <form action="/login" method="post" class="formulario">
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha" required><br> 
-        <input type="submit" value="Logar">
-    </form>
-
-
-    <!-- Exibir mensagem de erro -->
-    {% if message %}
-    <p class="mensagem">{{ message }}</p>
-    {% endif %}
-
-
-
+    <main>
+        <h1 class="texto">Login</h1>
+        
+        <!-- Exibir mensagem de erro -->
+        {% if message %}
+        <p class="mensagem">{{ message }}</p>
+        {% endif %}
+        
+        <form action="/login" method="post" class="formulario">
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha" name="senha" required><br> 
+            <input type="submit" value="Logar">
+        </form>
+    </main>
 </body>
 </html>
