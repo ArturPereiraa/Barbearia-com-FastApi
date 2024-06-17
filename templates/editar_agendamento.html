@@ -14,7 +14,11 @@
                 <a href="/" class="opcao">Início</a>
                 <a href="/agendamento" class="opcao">Agende-se</a>
                 <a href="/cortes" class="opcao">Cortes</a>
+                {% if request.session.get('user_email') %}
                 <a href="/perfil" class="profile"><img src="/static/img/perfil.png" alt="Perfil" width="30" height="30"></a>
+                {% else %}
+                <a href="/login" class="opcao">Login</a>    
+                {% endif %}
             </div>
         </nav>
     </header>
@@ -23,14 +27,11 @@
         <h2 class="texto">Editar Agendamento</h2>
         <form class="formulario" action="/editar_agendamento/{{ agendamento.id }}" method="post">
             <label for="data">Data:</label>
-            <input type="date" id="data" name="data" value="{{ agendamento.data.strftime('%Y-%m-%d') }}" required>
-            <br>
+            <input type="date" id="data" name="data" value="{{ agendamento.data }}" required><br><br>
             <label for="hora">Hora:</label>
-            <input type="time" id="hora" name="hora" value="{{ agendamento.hora.strftime('%H:%M') }}" required>
-            <br>
+            <input type="time" id="hora" name="hora" value="{{ agendamento.hora }}" required><br><br>
             <button class="salvar" type="submit">Salvar</button>
         </form>
     </div>
-
 </body>
 </html>

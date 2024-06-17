@@ -1,49 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia - Perfil</title>
-    <link rel="stylesheet" href="/static/css/meus_agendamentos.css">
-</head>
-<body>
-    <header>
-        <nav class="menu">
-            <img class="logo" src="/static/img/logo.png" alt="Logo" width="100" height="100">
-            <div class="menu-options">
-                <a href="/" class="opcao">Início</a>
-                <a href="/agendamento" class="opcao">Agende-se</a>
-                <a href="/cortes" class="opcao">Cortes</a>
-                {% if request.session.get('user_email') %}
-                <a href="/perfil" class="profile"><img src="/static/img/perfil.png" alt="Perfil" width="30" height="30"></a>
-                {% else %}
-                <a href="/login" class="opcao">Login</a>    
-                {% endif %}
-            </div>
-        </nav>
-    </header>
 
-    <div class="container">
-        <h2>Meus Agendamentos:</h2>
-        <div class="agendamentos-lista">
-            {% for agendamento in agendamentos %}
-            <div class="agendamento">
-                <strong>Nome:</strong> {{ agendamento.nome }}<br>
-                <strong>Data:</strong> {{ agendamento.data.strftime('%d/%m/%Y') }}<br>
-                <strong>Hora:</strong> {{ agendamento.hora.strftime('%H:%M') }}
-            </div>
-            {% endfor %}
-            <div class="botoes">
-                <a href="/editar_agendamento" class="editar">Editar</a>
-                <a href="/desmarcar" class="desmarcar">Desmarcar</a>
-            </div>
-        </div>
-    </div>
-
-    
-
-</body>         
-</html> -->
 
 
 <!DOCTYPE html>
