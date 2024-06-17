@@ -73,14 +73,7 @@ body {
     margin-bottom: 20px;
 }
 
-.agendamentos-lista {
-    text-align: start;
-    border: 2px solid rgb(255, 255, 255);;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #051119;
-    width: 300px;
-}
+
 
 .agendamento {
     margin-bottom: 15px; 

@@ -1,0 +1,110 @@
+/* geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+
+    position: sticky; 
+    top: 0; 
+    width: 100%; 
+    background-color: #050f16; 
+    z-index: 1000; 
+}
+
+
+body{
+    
+    background-color: #051119;
+    color: white;
+}
+
+/* NavBar*/
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.menu-options {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px
+}
+
+.opcao {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px; 
+    border-radius: 20px; 
+    background-color: rgb(58, 58, 58);
+}
+
+.profile {
+    margin-left: 20px; 
+}
+
+
+.profile img {
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    object-fit: cover; 
+}
+
+.texto {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*Formulario*/
+
+.formulario {
+    margin: 0 auto; 
+    margin-top: 50px;
+    width: 500px;
+    
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    background-color: #333;
+    color: white;
+}
+
+.salvar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #45a049;
+    ;
+}
+
+

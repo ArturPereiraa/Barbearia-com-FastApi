@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Agendamento</title>
+    <link rel="stylesheet" href="/static/css/editar_agendamento.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <img class="logo" src="/static/img/logo.png" alt="Logo" width="100" height="100">
+            <div class="menu-options">
+                <a href="/" class="opcao">Início</a>
+                <a href="/agendamento" class="opcao">Agende-se</a>
+                <a href="/cortes" class="opcao">Cortes</a>
+                <a href="/perfil" class="profile"><img src="/static/img/perfil.png" alt="Perfil" width="30" height="30"></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="texto">Editar Agendamento</h2>
+        <form class="formulario" action="/editar_agendamento/{{ agendamento.id }}" method="post">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" value="{{ agendamento.data.strftime('%Y-%m-%d') }}" required>
+            <br>
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" value="{{ agendamento.hora.strftime('%H:%M') }}" required>
+            <br>
+            <button class="salvar" type="submit">Salvar</button>
+        </form>
+    </div>
+
+</body>
+</html>
