@@ -23,7 +23,7 @@ git clone https://github.com/ArturPereiraa/Barbearia-com-FastApi.git
 cd Barbearia-com-FastApi
 ```
 
-### Execute o app.py
+** Execute o app.py**
 ```bash
 python app.py
 ```
